@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Form from './Form';
-import FormError from './FormError';
+// import FormError from './FormError';
 import FormDataDisplay from './FormDataDisplay';
 
 const INITIAL_STATE = {
@@ -15,7 +15,6 @@ const INITIAL_STATE = {
   resume: '',
   role: '',
   roleDescription: '',
-  formError: {},
   submitted: false,
 }
 
@@ -85,9 +84,9 @@ class App extends Component {
           currentState={ this.state }
           onBlurHandler={ this.onBlurHandler }
         />
-        <div className="container">
+        {/* <div className="container">
           <FormError formError={this.state.formError} />
-        </div>
+        </div> */}
         { submitted && <FormDataDisplay currentState={ this.state } /> }
       </main>
     );
